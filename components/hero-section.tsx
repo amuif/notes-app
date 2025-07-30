@@ -8,25 +8,24 @@ import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from './header'
 
 const transitionVariants = {
-  item: {
-    hidden: {
-      opacity: 0,
-      filter: 'blur(12px)',
-      y: 12,
+    item: {
+        hidden: {
+            opacity: 0,
+            filter: 'blur(12px)',
+            y: 12,
+        },
+        visible: {
+            opacity: 1,
+            filter: 'blur(0px)',
+            y: 0,
+            transition: {
+                type: 'spring',
+                bounce: 0.3,
+                duration: 1.5,
+            },
+        },
     },
-    visible: {
-      opacity: 1,
-      filter: 'blur(0px)',
-      y: 0,
-      transition: {
-        type: 'spring',
-        bounce: 0.3,
-        duration: 1.5,
-      },
-    },
-  },
-} as const;
-
+} as const
 
 export default function HeroSection() {
     return (
@@ -35,7 +34,8 @@ export default function HeroSection() {
             <main className="overflow-hidden">
                 <div
                     aria-hidden
-                    className="absolute inset-0 isolate hidden contain-strict lg:block">
+                    className="absolute inset-0 isolate hidden contain-strict lg:block"
+                >
                     <div className="w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
                     <div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
                     <div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
@@ -49,7 +49,8 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16">
+                                    className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16"
+                                >
                                     Build and Ship 10x faster with NS
                                 </TextEffect>
                                 <TextEffect
@@ -58,8 +59,12 @@ export default function HeroSection() {
                                     speedSegment={0.3}
                                     delay={0.5}
                                     as="p"
-                                    className="mt-8 max-w-2xl text-pretty text-lg">
-                                    Tailwindcss highly customizable components for building modern websites and applications that look and feel the way you mean it.
+                                    className="mt-8 max-w-2xl text-pretty text-lg"
+                                >
+                                    Tailwindcss highly customizable components
+                                    for building modern websites and
+                                    applications that look and feel the way you
+                                    mean it.
                                 </TextEffect>
 
                                 <AnimatedGroup
@@ -74,16 +79,21 @@ export default function HeroSection() {
                                         },
                                         ...transitionVariants,
                                     }}
-                                    className="mt-12 flex items-center gap-2">
+                                    className="mt-12 flex items-center gap-2"
+                                >
                                     <div
                                         key={1}
-                                        className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                                        className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
+                                    >
                                         <Button
                                             asChild
                                             size="lg"
-                                            className="rounded-xl px-5 text-base">
+                                            className="rounded-xl px-5 text-base"
+                                        >
                                             <Link href="#link">
-                                                <span className="text-nowrap">Start Building</span>
+                                                <span className="text-nowrap">
+                                                    Start Building
+                                                </span>
                                             </Link>
                                         </Button>
                                     </div>
@@ -92,9 +102,12 @@ export default function HeroSection() {
                                         asChild
                                         size="lg"
                                         variant="ghost"
-                                        className="h-10.5 rounded-xl px-5 text-base">
+                                        className="h-10.5 rounded-xl px-5 text-base"
+                                    >
                                         <Link href="#link">
-                                            <span className="text-nowrap">Request a demo</span>
+                                            <span className="text-nowrap">
+                                                Request a demo
+                                            </span>
                                         </Link>
                                     </Button>
                                 </AnimatedGroup>
@@ -111,7 +124,8 @@ export default function HeroSection() {
                                     },
                                 },
                                 ...transitionVariants,
-                            }}>
+                            }}
+                        >
                             <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
                                 <div
                                     aria-hidden
@@ -142,7 +156,8 @@ export default function HeroSection() {
                         <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
                             <Link
                                 href="/"
-                                className="block text-sm duration-150 hover:opacity-75">
+                                className="block text-sm duration-150 hover:opacity-75"
+                            >
                                 <span> Meet Our Customers</span>
 
                                 <ChevronRight className="ml-1 inline-block size-3" />

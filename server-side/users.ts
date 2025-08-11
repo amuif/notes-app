@@ -10,7 +10,7 @@ export const SignInUser = async ({
     password: string
 }) => {
     try {
-        await auth.api.signInEmail({
+        const response = await auth.api.signInEmail({
             body: {
                 email,
                 password,
@@ -18,10 +18,14 @@ export const SignInUser = async ({
             asResponse: true,
         })
 
-        return { success: true, message: 'Signed in successfully ' }
+        if (response.ok) {
+            return { success: true, message: 'Signed in successfully ' }
+        } else {
+            return { success: false, message: 'Failed to sign in' }
+        }
     } catch (error) {
         const e = error as Error
-        return { success: false, message: e.message || 'Failed to signin' }
+        return { success: false, message: e.message || 'Failed to sign in' }
     }
 }
 export const SignUpUser = async ({
@@ -34,7 +38,7 @@ export const SignUpUser = async ({
     name: string
 }) => {
     try {
-        await auth.api.signUpEmail({
+        const response = await auth.api.signUpEmail({
             body: {
                 email,
                 password,
@@ -42,10 +46,13 @@ export const SignUpUser = async ({
             },
             asResponse: true,
         })
+        if (response.ok) {
+            return { success: true, message: 'Signed up successfully ' }
+        }
 
-        return { success: true, message: 'Signed up successfully ' }
+        return { success: false, message: 'Failed to sign up' }
     } catch (error) {
         const e = error as Error
-        return { success: false, message: e.message || 'Failed to signin' }
+        return { success: false, message: e.message || 'Failed to sign up' }
     }
 }

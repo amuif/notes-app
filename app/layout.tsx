@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
     title: 'Write Wave',
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`font-roboto antialiased`}>
+            <body
+                suppressHydrationWarning
+                className={`font-roboto antialiased`}
+            >
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
@@ -23,6 +27,7 @@ export default function RootLayout({
                 >
                     {' '}
                     {children}
+                    <Toaster />
                 </ThemeProvider>
             </body>
         </html>

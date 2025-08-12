@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { useScroll } from "motion/react";
 import Image from "next/image";
 import { ModeSwitcher } from "./mode-switcher";
-
+import Logo from "@/public/write-wave.png"
 const menuItems: { name: string; href: string }[] = [];
 
 export const HeroHeader = () => {
@@ -41,7 +41,7 @@ export const HeroHeader = () => {
                 className="flex items-center space-x-2"
               >
                 <Image
-                  src="/write-wave.png"
+                  src={Logo.src}
                   alt="logo"
                   width={60}
                   height={60}

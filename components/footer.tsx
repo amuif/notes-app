@@ -12,12 +12,12 @@ export default function Footer() {
         >
           <Image src="/write-wave.png" alt="logo" width={60} height={60} />
 
-          <span className="text-2xl font-bold">Noteforge</span>
+          <span className="text-2xl font-bold">Write wave</span>
         </Link>
 
         <span className="text-muted-foreground block text-center text-sm">
           {" "}
-          © {new Date().getFullYear()} NoteForge, All rights reserved
+          © {new Date().getFullYear()} write wave, All rights reserved
         </span>
       </div>
     </footer>

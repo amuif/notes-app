@@ -47,7 +47,7 @@ export const HeroHeader = () => {
                   height={60}
                 />
 
-                <span className="text-2xl font-bold">NoteForge</span>
+                <span className="text-2xl font-bold">Write wave</span>
               </Link>
 
               <button

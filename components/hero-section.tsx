@@ -55,7 +55,7 @@ export default function HeroSection() {
                   as="p"
                   className="mt-8 max-w-2xl text-pretty text-lg"
                 >
-                  Supercharge your workflow with NoteForge — the smartest way to
+                  Supercharge your workflow with write wave— the smartest way to
                   capture, organize, and link dev notes, code snippets, and
                   technical insights.
                 </TextEffect>

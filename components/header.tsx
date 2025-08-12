@@ -41,7 +41,7 @@ export const HeroHeader = () => {
                 className="flex items-center space-x-2"
               >
                 <Image
-                  src="/noteforge-logo.png"
+                  src="/write-wave.png"
                   alt="logo"
                   width={60}
                   height={60}
@@ -93,7 +93,7 @@ export const HeroHeader = () => {
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <div className="flex items-center">
                   <Link
-                    href="https://github.com/TheOrcDev/noteforge"
+                    href="https://github.com/amuif/notes-app"
                     target="_blank"
                   >
                     <Button

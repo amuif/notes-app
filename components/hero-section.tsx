@@ -45,7 +45,7 @@ export default function HeroSection() {
                   as="h1"
                   className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16"
                 >
-                  🔥 Forge Smarter Notes. Code Better.
+                  🔥 Write smarter Notes. Code Better.
                 </TextEffect>
                 <TextEffect
                   per="line"
@@ -84,7 +84,7 @@ export default function HeroSection() {
                       className="rounded-xl px-5 text-base"
                     >
                       <Link href="/dashboard">
-                        <span className="text-nowrap">Start Forging</span>
+                        <span className="text-nowrap">Start waving</span>
                       </Link>
                     </Button>
                   </div>

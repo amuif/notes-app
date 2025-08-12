@@ -61,13 +61,20 @@ export function LoginForm({
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsLoading(true);
-      const response = await signInUser(values.email, values.password);
-      if (response.success) {
-        toast.success(response.message);
-        router.push("/dashboard");
-      } else {
-        toast.error(response.message);
-      }
+      const response = await authClient.signIn.email({
+        email: values.email,
+        password: values.password,
+        rememberMe: true,
+        callbackURL: "/dashboard",
+      });
+      console.log(response);
+      // if (response.success) {
+      //   toast.success(response.message);
+      //   await new Promise((res) => setTimeout(res, 100));
+      //   router.push("/dashboard");
+      // } else {
+      //   toast.error(response.message);
+      // }
     } catch (error) {
       console.error(error);
     } finally {

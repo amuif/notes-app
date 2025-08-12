@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NoteForge - Your Dev Note-Taking App",
+  title: "Write wave- Your Dev Note-Taking App",
   description:
-    "NoteForge is a digital notebook that allows you to take notes, create notebooks, and more.",
+    "Write wave is a digital notebook that allows you to take notes, create notebooks, and more.",
 };
 
 export default function RootLayout({

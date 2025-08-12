@@ -29,7 +29,7 @@ import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
-
+import { useRouter } from "next/navigation";
 const formSchema = z.object({
   email: z.email(),
   password: z.string().min(8),
@@ -41,6 +41,7 @@ export function SignupForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -64,10 +65,10 @@ export function SignupForm({
       const response = await signUpUser(
         values.email,
         values.password,
-        values.name
+        values.name,
       );
       if (response.success) {
-        toast.success("Please check your email for verification.");
+        router.push("/dashboard");
       } else {
         toast.error(response.message);
       }
